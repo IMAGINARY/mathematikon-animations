@@ -55,7 +55,7 @@
         const form = document.createElement('form');
         form.appendChild(button);
 
-        window.addEventListener('DOMContentLoaded', () => document.body.appendChild(form));
+        window.addEventListener('DOMContentLoaded', () => document.body.insertAdjacentElement('afterbegin', form));
     }
 
     function init(which) {
