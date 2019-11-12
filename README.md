@@ -8,6 +8,7 @@ This repository contains the apps for capturing the animations shown on the mirr
 - In-and-out: [Animate](in-and-out/index.html), [Capture](in-and-out/index.html?capture)
 - Waltz of the Circles: [Animate](waltz-of-the-circles/index.html), [Capture](waltz-of-the-circles/index.html?capture)
 - Spiroscillate: [Animate](spiroscillate/index.html), [Capture](spiroscillate/index.html?capture)
+- Sin-Cos-Lines: [Animate](sin-cos-lines/index.html), [Capture](sin-cos-lines/index.html?capture)
 
 # Notes
 
