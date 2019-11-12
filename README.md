@@ -7,6 +7,7 @@ This repository contains the apps for capturing the animations shown on the mirr
 - Whitney wheel: [Animate](whitney/index.html), [Capture](whitney/index.html?capture)
 - In-and-out: [Animate](in-and-out/index.html), [Capture](in-and-out/index.html?capture)
 - Waltz of the Circles: [Animate](waltz-of-the-circles/index.html), [Capture](waltz-of-the-circles/index.html?capture)
+- Spiroscillate: [Animate](spiroscillate/index.html), [Capture](spiroscillate/index.html?capture)
 
 # Notes
 
