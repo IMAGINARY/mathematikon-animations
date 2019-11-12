@@ -1,11 +1,28 @@
+const width = 1080;
+const height = 1080;
+const sideLengthFactor = 0.9; // with respect to min(width, height)
+const loopDuration = 10000;
+const strokeWidthFactor = 5.0 / 1080.0; // equals a stroke width of 6 on 1080x1080
+
+const sideLength = Math.min(width, height) * sideLengthFactor;
+
 function setup() {
-    createCanvas(540, 540);
-    strokeWeight(3);
+    createCanvas(width, height);
+    stroke(255);
+    strokeWeight(Math.min(width, height) * strokeWidthFactor);
 }
 
 function draw() {
-    background(240);
-    harom(500, 460, 40, 460, 6, (sin(0.0005 * millis() % (2 * PI)) + 1) / 2);
+    background(0);
+    const cx = width / 2.0;
+    const cy = height / 2.0;
+    const triangleHeight = sideLength * sqrt(3.0) / 2.0;
+    harom(
+        cx + sideLength / 2.0, cy + triangleHeight / 2.0,
+        cx - sideLength / 2.0, cy + triangleHeight / 2.0,
+        6,
+        (sin(((PI) * millis() / loopDuration) % (2 * PI)) + 1) / 2
+    );
 }
 
 function harom(ax, ay, bx, by, level, ratio) {
