@@ -4,6 +4,8 @@ This repository contains the apps for capturing the animations shown on the mirr
  
 # Apps
 
+- Whitney wheel: [Animate](whitney/index.html), [Capture](whitney/index.html?capture)
+
 # Notes
 
  - Google Chrome based web browser is recommended (for WebM capturing support via [CCapture.js](https://github.com/spite/ccapture.js)) 
