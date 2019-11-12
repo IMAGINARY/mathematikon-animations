@@ -5,6 +5,7 @@ This repository contains the apps for capturing the animations shown on the mirr
 # Apps
 
 - Whitney wheel: [Animate](whitney/index.html), [Capture](whitney/index.html?capture)
+- In-and-out: [Animate](in-and-out/index.html), [Capture](in-and-out/index.html?capture)
 
 # Notes
 
