@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Waltz of the Circles</title>
+    <script src="../vendor/ccapture.js/CCapture.all.min.js"></script>
+    <script src="../vendor/processing.js/processing.min.js"></script>
+    <script src="../src/js/IMAGINARY.Capture.js"></script>
+    <style>
+        /* Processing.js seems to insert an unnamed span right above the stop capture button :-( */
+        span {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<p>
+    Based on <a href="http://www.openprocessing.org/sketch/748916">"Waltz of the Circles" by MiniPear</a><br/>
+    Licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution-ShareAlike</a>
+</p>
+<canvas id="sketch" data-processing-sources="sketch.pde"></canvas>
+<script>
+    IMAGINARY.Capture.init("processing.js");
+</script>
+</body>
+</html>
