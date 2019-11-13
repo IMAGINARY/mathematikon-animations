@@ -6,6 +6,8 @@ float v2;
 boolean increment = false;
 float fator =0.00001;
 
+float speedFactor = 0.75;
+
 void setup(){
 background(20);
 initSize();
@@ -15,7 +17,7 @@ smooth(2);
 
 void draw(){
   background(0);
-  angle+= 0.01;
+  angle+= 0.01 * speedFactor;
   stroke(255,200);
 
   translate(width/2, height/2);
@@ -33,7 +35,7 @@ void draw(){
     
     line(x(t+i),y(t+i),x2(t+i),y2(t+i));}
   
-  t += 0.005;
+  t += 0.005 * speedFactor;
  
  if(increment)    v1+=fator;
   
