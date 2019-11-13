@@ -1,7 +1,7 @@
 int n, s, f1, f2, f3;
 
 void setup() { 
-    size(800, 800);
+    size(512, 512);
     background(20);
     smooth();
     noFill();
