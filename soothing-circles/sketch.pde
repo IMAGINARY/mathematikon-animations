@@ -16,7 +16,7 @@ void setup() {
 }
 
 void draw() {
-    background(20);
+    background(0);
     float t = millis()/f1;
 
     translate(width/2, height/2);
