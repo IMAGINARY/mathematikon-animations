@@ -6,7 +6,7 @@ void setup() {
     smooth();
     noFill();
     stroke(255);
-    strokeWeight(5);
+    strokeWeight(3);
     
     n = 500;   //number of ellipse per circle
     m = 10;    //magnitude of waves
