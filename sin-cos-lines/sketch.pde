@@ -8,18 +8,18 @@ float fator =0.00001;
 
 void setup(){
 background(20);
-size(500,500);
-v1 = random(0.4)+0.2;
+size(1080,1080);
+initV1();
 smooth(2);
-
 }
 
 void draw(){
   background(0);
   angle+= 0.01;
   stroke(255,200);
- 
-  translate(width/2-40, height/2);
+
+  translate(width/2, height/2);
+  scale(min(width,height)/500.0);
  rotate(sin(angle));
   
   for(int i=1; i < NUM_LINES; i++){
@@ -39,8 +39,26 @@ void draw(){
   
 }
 
+void initV1() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    if(urlSearchParams.has("v1")) {
+        setV1(Number.parseFloat(urlSearchParams.get("v1")));
+    } else {
+        randomizeV1();
+    }
+}
+
+void setV1(float new_v1) {
+    v1 = new_v1;
+    console.log("v1:", v1);
+}
+
+void randomizeV1() {
+    setV1(random(0.4)+0.2);
+}
+
 void mousePressed() {
-v1 = random(0.4)+0.2;
+    randomizeV1();
 }
 
 
@@ -54,7 +72,7 @@ void keyPressed() {
 
 
   if(key == ' '){
-   v1 = random(0.4)+0.2;
+      randomizeV1();
   }
 
   
