@@ -8,7 +8,7 @@ float fator =0.00001;
 
 void setup(){
 background(20);
-size(1080,1080);
+initSize();
 initV1();
 smooth(2);
 }
@@ -37,6 +37,22 @@ void draw(){
  
  if(increment)    v1+=fator;
   
+}
+
+void initSize() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    int w, h;
+    if( urlSearchParams.has("width") ) {
+        w = Number.parseInt(urlSearchParams.get("width"));
+    } else {
+        w = 512;
+    }
+    if( urlSearchParams.has("height") ) {
+        h = Number.parseInt(urlSearchParams.get("height"));
+    } else {
+        h = 512;
+    }
+    size(w,h);
 }
 
 void initV1() {
