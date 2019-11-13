@@ -1,7 +1,7 @@
 int n, s, f1, f2, f3;
 
 void setup() { 
-    size(512, 512);
+    initSize();
     background(20);
     smooth();
     noFill();
@@ -20,6 +20,7 @@ void draw() {
     float t = millis()/f1;
 
     translate(width/2, height/2);
+    scale(min(width, height) / 512.0);
 
     paintCircle(t, 0);
     paintCircle(t, PI);
@@ -36,4 +37,20 @@ void paintCircle(float t, int o) {
         vertex(x, y);
     }
     endShape();
+}
+
+void initSize() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    int w, h;
+    if( urlSearchParams.has("width") ) {
+        w = Number.parseInt(urlSearchParams.get("width"));
+    } else {
+        w = 512;
+    }
+    if( urlSearchParams.has("height") ) {
+        h = Number.parseInt(urlSearchParams.get("height"));
+    } else {
+        h = 512;
+    }
+    size(w,h);
 }
